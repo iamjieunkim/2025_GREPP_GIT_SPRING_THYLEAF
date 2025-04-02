@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml"
+    layout:decorate="~{layouts/basic_layout}"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div layout:fragment="contents">
+        <span class="text-2xl font-bold">[[ ${post.title}]]</span>
+        <div class="post-meta-container">
+            <span class="text-gray-500 text-sm">
+                [[ ${post.id} ]]번 글, 작성자 : [[${post.author}]]
+            </span>
+        </div>
+        <div class="diviver">
+            <th:text="${content}"></th:text>
+        </div>
+    </div>
+</body>
+</html>

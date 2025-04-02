@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="navbar bg-base-200" th:fragment="top_bar">
+        <button th:if="${isLogin}" class="btn btn-ghost text-lg">Hello!</button>
+        <button th:unless="${isLogin}" class="btn btn-ghost text-lg">No Auth!</button>
+    </div>
+</body>
+</html>

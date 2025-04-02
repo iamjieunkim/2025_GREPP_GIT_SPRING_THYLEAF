@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문법 페이지5</title>
+</head>
+<body>
+  <h3>바로가기</h3>
+  <ul>
+    <li>
+      <a th:href="@{~/}">index</a>
+    </li>
+    <li>
+      <a th:href="@{~/page1}">page1</a>
+    </li>
+    <li th:each="idx : ${#numbers.sequence(1, 4)}">
+      <a th:href="@{/page/{idx}(idx=${idx})}">/page/[[ ${idx} ]]</a>
+    </li>
+  </ul>
+</body>
+</html>

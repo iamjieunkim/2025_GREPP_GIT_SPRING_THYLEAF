@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문법 페이지 3번</title>
+</head>
+<body>
+    <div th:object="${post}">
+        <h2 th:text="*{title}">게시물 제목</h2>
+        <hr>
+        <h4> [[ *{id} ]]번 게시물, 작성자 : [[ *{author} ]] </h4>
+        <div>
+            <p th:text="*{contents}">본문</p>
+        </div>
+    </div>
+</body>
+</html>

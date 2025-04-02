@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문법페이지2</title>
+</head>
+<body>
+<div>
+    <h2>사야될 물건들</h2>
+    <ul>
+        <li th:each="item : ${shoppingList}">
+            [[ ${item} ]]
+<!--            <li th:each="item : ${shoppingList}" th:text="${item}">-->
+        </li>
+    </ul>
+</div>
+</body>
+</html>

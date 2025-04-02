@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문법 페이지 6</title>
+</head>
+<body>
+    <!--
+    상품명
+    가격
+
+    주문
+    상품명
+    가격
+    몇개(주문수량)
+    총가격
+
+      -->
+
+    <div th:with="name='구구단'">
+        <h2 th:text="${name}"> 제목 </h2>  <!--구구단-->
+        <h3> [[ ${target} ]]단 </h3> <!--target-->
+        <div>
+
+            <th:block th:each="idx : ${#numbers.sequence(1,9)}">
+                <p>[[ ${target} ]] x [[ ${idx} ]] = [[ ${target}*${idx} ]]</p>
+
+            </th:block>
+
+        </div>
+    </div>
+</body>
+</html>
