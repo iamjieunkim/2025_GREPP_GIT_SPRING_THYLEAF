@@ -14,9 +14,8 @@
                 [[ ${post.id} ]]번 글, 작성자 : [[${post.author}]]
             </span>
         </div>
-        <div class="diviver">
-            <th:text="${content}"></th:text>
-        </div>
+        <div class="divider"></div>
+        <p th:text="${post.getContents()}"></p>
     </div>
 </body>
 </html>
